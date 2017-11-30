@@ -72,22 +72,20 @@ h4.sub-section-heading {
     font-size: 22px;
   }
 }
-p, ol, ul {
+p, 
+.content-list {
   font-size: 16px;
   font-weight: 400;
   color: #5e5e5e;
   line-height: 1.5;
   margin: 0;
 }
-.bg-primary {
+.bg-red {
   background-color: #d22f25; /* aka: red */
 }
 .bg-dark {
   background-color: #222222; /* aka: almost black */
   color: #f1f1f1;
-}
-.bg-white {
-  background-color: white;
 }
 .bg-gray {
   background-color: #f6f6f6; /* aka: light gray */
@@ -97,9 +95,7 @@ p, ol, ul {
   color: #575757;
 }
 .text-white {
-  /*color: #e2e2e2;*/
   color: rgba(255, 255, 255, 0.8);
-  /*color: #f1f1f1;*/
 }
 section {
   padding: 100px 0;
@@ -127,7 +123,7 @@ aside {
   border-color: rgba(34, 34, 34, 0.05);
   font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 15px;
   text-align: left;
   line-height: 1.15;
   letter-spacing: normal;
@@ -140,7 +136,7 @@ aside {
   border-color: rgba(34, 34, 34, 0.05);
   font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 15px;
   letter-spacing: normal;
 }
 .navbar-default .navbar-header .navbar-brand {
@@ -155,18 +151,19 @@ aside {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin: 0;
-  line-height: 1.2;
+  line-height: 1.15;
   overflow-wrap: break-word;
   word-break: break-word;
   word-wrap: break-word;
 }
-.navbar-default .navbar-header .navbar-brand:hover,
-.navbar-default .navbar-header .navbar-brand:focus {
-  color: #d22f25;
+.navbar-default .navbar-header .navbar-brand-text:hover,
+.navbar-default .navbar-header .navbar-brand-text:focus,
+.navbar-default .navbar-header .navbar-brand-text:focus:hover {
+  color: #e9352a;
 }
 .navbar-default .navbar-header .navbar-toggle { /* button for the menu dropdown on mobile */
   font-weight: 300;
-  font-size: 16px;
+  font-size: 15px;
   color: #f1f1f1;
   background-color: transparent;
   border-color: transparent;
@@ -185,7 +182,7 @@ aside {
 .navbar-default .nav > li > a:focus:hover,
 .navbar-default .nav .dropdown-menu > li > a:hover,
 .navbar-default .nav .dropdown-menu > li > a:focus:hover {
-  color: #d22f25;
+  color: #e9352a;
   background-color: transparent;
 }
 .navbar-default .nav > li.active > a,
@@ -200,7 +197,7 @@ aside {
 .navbar-default .nav > li.active > a:focus:hover,
 .navbar-default .nav .dropdown-menu > li.active > a:hover,
 .navbar-default .nav .dropdown-menu > li.active > a:focus:hover {
-  color: #d22f25;
+  color: #e9352a;
   background-color: transparent;
 }
 .navbar-default .nav .mobile-nav {
@@ -215,13 +212,13 @@ aside {
 .navbar-default .nav .show-contact-navbar {
   display: block;
 }
-.navbar-default .nav .divider {
+/*.navbar-default .nav .divider {
   background-color: #d22f25;
   height: 1px;
   width: 100%;
   margin: 9px 0;
   overflow: hidden;
-}
+}*/
 @media (min-width: 768px) {
   .navbar-default {
     border-color: rgba(255, 255, 255, 0.3);
@@ -230,15 +227,10 @@ aside {
   .navbar-default.homepage .nav .dropdown-menu {
     background-color: transparent;
   }
-  .navbar-default .navbar-header {
-    width: 35%;
-  }
   .navbar-default .navbar-header .navbar-brand {
     width: auto;
   }
-  .navbar-default .navbar-header .navbar-brand .navbar-brand-text {
-    font-size: 22px;
-  }
+/* since we want the colors to be consistent regardless of where the user has scrolled to, these don't need to be redefined
   .navbar-default .navbar-header .navbar-brand:hover,
   .navbar-default .navbar-header .navbar-brand:focus {
     color: #d22f25;
@@ -250,18 +242,19 @@ aside {
   .navbar-default .nav > li > a:hover,
   .navbar-default .nav > li > a:focus:hover {
     color: #d22f25;
-  }
+  }*/
   .navbar-default.affix,
   .navbar-default.homepage.affix .nav .dropdown-menu { /* the color of the navbar after it scrolls */
     background-color: #111111;
     border-color: rgba(34, 34, 34, 0.05);
   }
+/* since we want the colors to be consistent regardless of where the user has scrolled to, these don't need to be redefined
   .navbar-default.affix .navbar-header .navbar-brand {
     color: #f1f1f1;
   }
-  .navbar-default.affix .navbar-header .navbar-brand:hover,
-  .navbar-default.affix .navbar-header .navbar-brand:focus {
-    color: #d22f25;
+  .navbar-default.affix .navbar-header .navbar-brand-text:hover,
+  .navbar-default.affix .navbar-header .navbar-brand-text:focus {
+    color: #e9352a;
   }
   .navbar-default.affix .nav > li > a,
   .navbar-default.affix .nav > li > a:focus {
@@ -269,8 +262,8 @@ aside {
   }
   .navbar-default.affix .nav > li > a:hover,
   .navbar-default.affix .nav > li > a:focus:hover {
-    color: #d22f25;
-  }
+    color: #e9352a;
+  }*/
   .navbar-default .nav .mobile-nav {
     display: none !important;
   }
@@ -287,6 +280,14 @@ aside {
   .navbar-default .nav .open > a:focus {
     color: #f1f1f1;
     background-color: transparent;
+  }
+}
+@media (min-width: 992px) {
+  .navbar-default {
+    font-size: 16px;
+  }
+  .navbar-default .navbar-header .navbar-brand .navbar-brand-text {
+    font-size: 22px;
   }
 }
 @media (min-width: 768px) and (max-width: 918px) {
@@ -399,6 +400,9 @@ footer p {
 .service-box p {
   margin-bottom: 0;
 }
+.portfolio-container {
+  margin-top: 50px;
+}
 .portfolio-box {
   position: relative;
   display: block;
@@ -409,7 +413,8 @@ footer p {
   color: white;
   opacity: 0;
   display: block;
-  background: rgba(240, 95, 64, 0.9);
+  /*background: rgba(240, 95, 64, 0.9);*/
+  background: rgba(0,0,0,0.5);
   position: absolute;
   bottom: 0;
   text-align: center;
@@ -593,15 +598,4 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: #222222;
-}
-
-.navbar-fixed-side {
-  position: fixed;
-    margin: 0 -15px;
-    height: 100vh;
-    width: inherit;
-    overflow: auto;
-    border-top-width: 0;
-    border-bottom-width: 0;
-    border-radius: 0;
 }
