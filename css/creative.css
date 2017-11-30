@@ -122,7 +122,7 @@ aside {
   background-color: #111111;
   border-color: rgba(34, 34, 34, 0.05);
   font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 15px;
   text-align: left;
   line-height: 1.15;
@@ -135,7 +135,7 @@ aside {
   background-color: #111111;
   border-color: rgba(34, 34, 34, 0.05);
   font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 15px;
   letter-spacing: normal;
 }
@@ -156,13 +156,8 @@ aside {
   word-break: break-word;
   word-wrap: break-word;
 }
-.navbar-default .navbar-header .navbar-brand-text:hover,
-.navbar-default .navbar-header .navbar-brand-text:focus,
-.navbar-default .navbar-header .navbar-brand-text:focus:hover {
-  color: #e9352a;
-}
 .navbar-default .navbar-header .navbar-toggle { /* button for the menu dropdown on mobile */
-  font-weight: 300;
+  font-weight: 400;
   font-size: 15px;
   color: #f1f1f1;
   background-color: transparent;
@@ -171,12 +166,17 @@ aside {
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #f1f1f1;
 }
+.navbar-default .navbar-header .navbar-brand-text:hover,
+.navbar-default .navbar-header .navbar-brand-text:focus,
+.navbar-default .navbar-header .navbar-brand-text:focus:hover {
+  color: #e9352a;
+}
 .navbar-default .nav > li > a,
 .navbar-default .nav > li > a:focus,
 .navbar-default .nav .dropdown-menu > li > a,
 .navbar-default .nav .dropdown-menu > li > a:focus {
   color: #f1f1f1;
-  font-weight: 300;
+  font-weight: 400;
 }
 .navbar-default .nav > li > a:hover,
 .navbar-default .nav > li > a:focus:hover,
@@ -223,32 +223,36 @@ aside {
   .navbar-default {
     border-color: rgba(255, 255, 255, 0.3);
   }
-  .navbar-default.homepage,
-  .navbar-default.homepage .nav .dropdown-menu {
+  .navbar-default.show-header,
+  .navbar-default.show-header .nav .dropdown-menu {
     background-color: transparent;
   }
   .navbar-default .navbar-header .navbar-brand {
     width: auto;
   }
-/* since we want the colors to be consistent regardless of where the user has scrolled to, these don't need to be redefined
-  .navbar-default .navbar-header .navbar-brand:hover,
-  .navbar-default .navbar-header .navbar-brand:focus {
-    color: #d22f25;
+  .navbar-default.show-header .navbar-header .navbar-brand-text:hover,
+  .navbar-default.show-header .navbar-header .navbar-brand-text:focus,
+  .navbar-default.show-header .navbar-header .navbar-brand-text:focus:hover {
+    color: #111111;
   }
-  .navbar-default .nav > li > a,
-  .navbar-default .nav > li > a:focus {
-    color: #f1f1f1;
+  .navbar-default.show-header .nav > li > a:hover,
+  .navbar-default.show-header .nav > li > a:focus:hover,
+  .navbar-default.show-header .nav .dropdown-menu > li > a:hover,
+  .navbar-default.show-header .nav .dropdown-menu > li > a:focus:hover {
+    color: #111111;
   }
-  .navbar-default .nav > li > a:hover,
-  .navbar-default .nav > li > a:focus:hover {
-    color: #d22f25;
-  }*/
+  .navbar-default.show-header .nav > li.active > a:hover,
+  .navbar-default.show-header .nav > li.active > a:focus:hover,
+  .navbar-default.show-header .nav .dropdown-menu > li.active > a:hover,
+  .navbar-default.show-header .nav .dropdown-menu > li.active > a:focus:hover {
+    color: #111111;
+  }
   .navbar-default.affix,
-  .navbar-default.homepage.affix .nav .dropdown-menu { /* the color of the navbar after it scrolls */
+  .navbar-default.show-header.affix .nav .dropdown-menu { /* the color of the navbar after it scrolls */
     background-color: #111111;
     border-color: rgba(34, 34, 34, 0.05);
   }
-/* since we want the colors to be consistent regardless of where the user has scrolled to, these don't need to be redefined
+ /*since we want the colors to be consistent regardless of where the user has scrolled to, these don't need to be redefined*/
   .navbar-default.affix .navbar-header .navbar-brand {
     color: #f1f1f1;
   }
@@ -257,13 +261,17 @@ aside {
     color: #e9352a;
   }
   .navbar-default.affix .nav > li > a,
-  .navbar-default.affix .nav > li > a:focus {
+  .navbar-default.affix .nav > li > a:focus,
+  .navbar-default.affix .nav .dropdown-menu > li > a,
+  .navbar-default.affix .nav .dropdown-menu > li > a:focus {
     color: #f1f1f1;
   }
   .navbar-default.affix .nav > li > a:hover,
-  .navbar-default.affix .nav > li > a:focus:hover {
+  .navbar-default.affix .nav > li > a:focus:hover,
+  .navbar-default.affix .nav .dropdown-menu > li > a:hover,
+  .navbar-default.affix .nav .dropdown-menu > li > a:focus:hover {
     color: #e9352a;
-  }*/
+  }
   .navbar-default .nav .mobile-nav {
     display: none !important;
   }
@@ -307,9 +315,11 @@ header {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-image: url('../img/header.jpg');
+  /*background-image: url('../img/header.jpg');*/
+  background-image: url('../img/fullsize/dozerfireline.jpg');
+  opacity: 0.8;
   text-align: center;
-  color: #f1f1f1;
+  color: #111111;
 }
 header .header-content {
   position: relative;
@@ -340,6 +350,8 @@ header .header-content .header-content-inner p {
   }
   header.sm-header {
     min-height: 50%;
+    /*background-image: url('../img/fullsize/wt21lake.jpg');*/
+    /*color: #f1f1f1;*/
   }
   header .header-content {
     position: absolute;
@@ -414,7 +426,7 @@ footer p {
   opacity: 0;
   display: block;
   /*background: rgba(240, 95, 64, 0.9);*/
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.2);
   position: absolute;
   bottom: 0;
   text-align: center;
