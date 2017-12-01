@@ -1,7 +1,5 @@
-/*!
- * Start Bootstrap - Creative v3.3.7+1 (http://startbootstrap.com/template-overviews/creative)
- * Copyright 2013-2016 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+/*
+  Unminified styling
  */
 html,
 body {
@@ -14,7 +12,6 @@ body {
   letter-spacing: normal;
 }
 hr {
-  /*border-color: #888888;*/
   border-color: #e2e2e2;
   border-width: 3px;
   max-width: 50px;
@@ -315,7 +312,6 @@ header {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  /*background-image: url('../img/header.jpg');*/
   background-image: url('../img/fullsize/dozerfireline.jpg');
   opacity: 0.8;
   text-align: center;

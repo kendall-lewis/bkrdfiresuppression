@@ -1,6 +1,21 @@
 (function($) {
     "use strict"; // Start of use strict
 
+    // code to allow you to update unofficial website warning text in one place
+    var warningTitle = "UNOFFICIAL WEBSITE";
+    var warningMsg = "\
+    All information, postings, pictures, etc. are solely those of independent individuals who do not necessarily represent Beckwourth District, Plumas National Forest, the U.S. Forest Service, the USDA, or any entity of the U.S. Government.\
+    <br /><br />\
+    ***This site exists solely to assist with recruitment for fire suppression positions on the Beckwourth District only.***";
+
+    // code to allow you to update the date-last-updated in one place
+    var copyright = "Copyright &copy; 2017 PNF Beckwourth Ranger District - All rights reserved.";
+    var dateLastUpdated = "Last updated December 1, 2017";
+
+
+    $("aside").html('<div class="container text-center"><div class="call-to-action"><h2>'+warningTitle+'</h2><p class="text-white">'+warningMsg+'</p></div></div>');
+    $("footer").html('<div class="container"><div class="row"><div class="col-md-8"><p class="text-white">' + copyright + '</p></div><div class="col-md-4 last-updated"><p class="text-muted">' + dateLastUpdated + '</p></div></div></div>');
+
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
@@ -15,12 +30,12 @@
         target: '.navbar-fixed-top',
         offset: 51
     });
-/*
+
     // Closes the Responsive Menu on Menu Item Click
-    $('.navbar-collapse ul li a').click(function() {
-        $('.navbar-toggle:visible').click();
-    });
-*/
+    //$('.navbar-collapse ul li a').click(function() {
+    //    $('.navbar-toggle:visible').click();
+    //});
+
     // Offset for Main Navigation
     $('#mainNav').affix({
         offset: {
