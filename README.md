@@ -4,7 +4,7 @@ This site exists solely to assist with recruitment for fire suppression position
  
 ## Copyright and License
 
-Copyright 2017 PNF Beckwourth Ranger District. Code released under the [MIT](https://github.com/kendall-lewis/bkrdfiresuppression/gh-pages/LICENSE) license.
+Copyright 2017 PNF Beckwourth Ranger District. Code released under the [MIT](https://github.com/kendall-lewis/bkrdfiresuppression/blob/gh-pages/LICENSE) license.
 
 ## About this site
 
