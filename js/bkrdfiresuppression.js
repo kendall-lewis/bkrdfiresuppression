@@ -10,7 +10,7 @@
 
     // code to allow you to update the date-last-updated in one place
     var copyright = "Copyright &copy; 2017 PNF Beckwourth Ranger District - All rights reserved.";
-    var dateLastUpdated = "Last updated December 19, 2017";
+    var dateLastUpdated = "Last updated December 20, 2017";
 
 
     $("aside").html('<div class="container text-center"><div class="call-to-action"><h2>'+warningTitle+'</h2><p class="text-white">'+warningMsg+'</p></div></div>');
