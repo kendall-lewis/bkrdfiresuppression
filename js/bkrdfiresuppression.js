@@ -9,8 +9,8 @@
     ***This site exists solely to assist with recruitment for fire suppression positions on the Beckwourth District only.***";
 
     // code to allow you to update the date-last-updated in one place
-    var copyright = "Copyright &copy; 2017 PNF Beckwourth Ranger District - All rights reserved.";
-    var dateLastUpdated = "Last updated December 1, 2017";
+    var copyright = "Copyright &copy; 2018 PNF Beckwourth Ranger District - All rights reserved.";
+    var dateLastUpdated = "Last updated February 15, 2018";
 
 
     $("aside").html('<div class="container text-center"><div class="call-to-action"><h2>'+warningTitle+'</h2><p class="text-white">'+warningMsg+'</p></div></div>');
