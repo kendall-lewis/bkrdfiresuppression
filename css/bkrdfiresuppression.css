@@ -317,6 +317,14 @@ header {
   text-align: center;
   color: #111111;
 }
+header.disabled {
+  background-image: none;
+  background-color: #d22f25;
+}
+header.disabled .header-content .header-content-inner p {
+  font-size: 24px;
+  font-weight: 500;
+}
 header .header-content {
   position: relative;
   text-align: center;
